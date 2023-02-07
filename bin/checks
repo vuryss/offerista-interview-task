@@ -1,0 +1,6 @@
+#!/bin/sh
+
+vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php
+vendor/bin/phpcs
+vendor/bin/phpmd src text phpmd.xml
+vendor/bin/psalm
