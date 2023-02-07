@@ -40,6 +40,14 @@ zip/tarball.
 
 `docker run -itu 1000 --rm -v "$PWD":/app -w /app offerista-task composer install`
 
-### Running the command
+### Running the main task
 
 `docker run -itu 1000 --rm -v "$PWD":/app -w /app offerista-task bin/console app:prime-multiplication-table 10`
+
+### Running the tests
+
+`docker run -itu 1000 --rm -v "$PWD":/app -w /app offerista-task bin/phpunit`
+
+### Running the static code analysis checks
+
+`docker run -itu 1000 --rm -v "$PWD":/app -w /app offerista-task bin/checks`
