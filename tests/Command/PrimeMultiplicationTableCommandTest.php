@@ -4,15 +4,13 @@ declare(strict_types=1);
 
 namespace App\Tests\Command;
 
-use App\Command\PrimeMultiplicationTableCommand;
-use PHPUnit\Framework\TestCase;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\Console\Tester\CommandTester;
 
 class PrimeMultiplicationTableCommandTest extends KernelTestCase
 {
-    public function testMultiplicationTableCommand()
+    public function testMultiplicationTableCommand(): void
     {
         $kernel = self::bootKernel();
         $application = new Application($kernel);
